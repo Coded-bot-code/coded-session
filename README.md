@@ -34,7 +34,7 @@ FORK THE REPOSITORY (Repo)
 
 Get Session ID
     <br>
-<a href='https://dashboard.heroku.com/new?template=https://github.com/coded-bot-code/coded-session)' target="_blank"><img alt='DEPLOY' src='https://img.shield.io/badge/-SESSION ID-black?style=for-the-badge&logo=heroku&logoColor=white'/>
+<a href='https://dashboard.heroku.com/new?template=https://github.com/coded-bot-code/coded-session)' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-SESSION ID-black?style=for-the-badge&logo=heroku&logoColor=white'/>
 
 
 Now Deploy
