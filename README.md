@@ -32,9 +32,9 @@ FORK THE REPOSITORY (Repo)
     <br>
 <a href="https://github.com/coded-bot-code/coded-session"><img title="WEB" src="https://img.shields.io/badge/FORK Coded_Bot-QR?color=black&style=for-the-badge&logo=stackshare"></a>
 
-Pair Bot
+Get Session ID
     <br>
-<a href='https://dashboard.heroku.com/new?template=https://github.com/coded-bot-code/coded-session)' target="_blank">
+<a href='https://dashboard.heroku.com/new?template=https://github.com/coded-bot-code/coded-session)' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-SESSION ID-black?style=for-the-badge&logo=heroku&logoColor=white'/>
 
 
 Now Deploy
