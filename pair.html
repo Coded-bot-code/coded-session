@@ -27,6 +27,20 @@
     z-index: -1;
 }
 
+/* Glitch Effect */
+@keyframes glitch {
+    0% { text-shadow: 2px 2px #ff00ff; }
+    25% { text-shadow: -2px -2px #00ffcc; }
+    50% { text-shadow: 2px -2px #ff00ff; }
+    75% { text-shadow: -2px 2px #00ffcc; }
+    100% { text-shadow: 2px 2px #ff00ff; }
+}
+.glitch {
+    font-size: 2rem;
+    font-weight: bold;
+    animation: glitch 0.5s infinite alternate;
+}
+
     .container {
       display: flex;
       flex-direction: column;
@@ -147,6 +161,9 @@
   </style>
 </head>
 <body>
+<!-- Glitch Title -->
+    <h1 class="glitch">BERA TECH PAIR SITE</h1>
+
   <div class="container">
     <div class="main">
       <div class="box" id="box">
