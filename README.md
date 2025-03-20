@@ -24,7 +24,7 @@
   </a>
 </p>
 
-📞 **Contact on WhatsApp:** [`Codex Official Tech`](https://wa.me/2349031705641)  
+📞 **Contact on WhatsApp:** [`𝘾𝙤𝙙𝙚𝙭 𝙊𝙛𝙛𝙞𝙘𝙞𝙖𝙡 𝙏𝙚𝙘𝙝`](https://wa.me/2349031705641)  
 
 ---
 
