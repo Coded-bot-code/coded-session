@@ -62,16 +62,16 @@ router.get('/', async (req, res) => {
 ______________________________________
 ╔════◇
 ║ *『 AMAZING YOU'VE CHOSEN CODED BOT V1.0 』*
-║ _You Have Completed the First Step to Deploy a Whatsapp Bot._
+║ _You Have Completed the First Step to Deploy a Whatsapp Bot. ✓_
 ╚════════════════════════╝
 ╔═════◇
 ║  『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••』
-║❒ *Ytube:* _https://www.youtube.com/@Codex-964
-║❒ *Owner:* https://wa.me/2349031705641_
-║❒ *Repo:* _https://github.com/Coded-bot-code/coded-session_
-║❒ *WaGroup:* _https://chat.whatsapp.com/JyJ1cQZj4igCqIQGEpyoQi
-║❒ *WaChannel:* _https://whatsapp.com/channel/0029Vb6SHBgAe5VkDNntUR1W
-║❒ *Plugins:* _https://github.com/Coded-bot-code 
+║❒ *Ytube:* _`https://www.youtube.com/@Codex-964`
+║❒ *Owner:* `https://wa.me/2349031705641`_
+║❒ *Repo:* _```https://github.com/Coded-bot-code/coded-session```_
+║❒ *WaGroup:* _`https://chat.whatsapp.com/JyJ1cQZj4igCqIQGEpyoQi`
+║❒ *WaChannel:* _`https://whatsapp.com/channel/0029Vb6SHBgAe5VkDNntUR1W`
+║❒ *Plugins:* _```https://github.com/Coded-bot-code``` 
 ╚════════════════════════╝
 _____________________________________
 
