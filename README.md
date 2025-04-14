@@ -1,3 +1,5 @@
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=100&pause=1000&color=8A2BE2&center=true&width=1000&height=200&lines=🤖SESSION_ID-GENERATOR 👾" alt="Typing SVG" /></a>
+<br>
 # ✨Coded-Bot-Session-Generator 🤖🔥
 - Kindly star my repo
 - Fork and edit as you wish
