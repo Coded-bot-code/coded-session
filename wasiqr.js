@@ -68,11 +68,11 @@ ______________________________________
 ╚════════════════════════╝
 ╔═════◇
 ║  『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••』
-║❒ *Ytube:* _`https://www.youtube.com/@Codex-964`
-║❒ *Owner:* `https://wa.me/2349031705641`_
+║❒ *Youtube:* _`https://www.youtube.com/@CodexOfficialTech`
+║❒ *Owner:* `https://wa.me/2348029214393`_
 ║❒ *Repo:* _```https://github.com/Coded-bot-code/coded-session```_
-║❒ *WaGroup:* _`https://chat.whatsapp.com/JyJ1cQZj4igCqIQGEpyoQi`
-║❒ *WaChannel:* _`https://whatsapp.com/channel/0029Vb6SHBgAe5VkDNntUR1W`
+║❒ *WA Channel 1:* _`https://whatsapp.com/channel/0029VbA5JNtKmCPGmaHmCd0L`
+║❒ *Wa Channel 2:* _`https://whatsapp.com/channel/0029VbAuCjELtOj5n8Lv9h3d`
 ║❒ *Plugins:* _```https://github.com/Coded-bot-code``` 
 ╚════════════════════════╝
 _____________________________________
