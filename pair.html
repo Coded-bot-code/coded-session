@@ -188,7 +188,7 @@
     async function Copy() {
       let text = document.getElementById("copy").innerText;
       let obj = document.getElementById("copy");
-      await navigator.clipboard.writeText(obj.innerText.replace('CODE: ', ''));
+      await navigator.clipboard.writeText(obj.innerText.replace('CODE: ', 'STAC-KGPT'));
       obj.innerText = "COPIED";
       obj.style = "color:blue;font-weight:bold";
       obj.size = "5";
