@@ -1,9 +1,9 @@
-const PastebinAPI = require('pastebin-js'),
-pastebin = new PastebinAPI('EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL')
-const {makeid} = require('./id');
+const PastebinAPI = require('pastebin-js');
+const pastebin = new PastebinAPI('EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL');
+const { makeid } = require('./id');
 const express = require('express');
 const fs = require('fs');
-let router = express.Router()
+const router = express.Router();
 const pino = require("pino");
 const {
     default: Gifted_Tech,
@@ -13,88 +13,88 @@ const {
     Browsers
 } = require("maher-zubair-baileys");
 
-function removeFile(FilePath){
-    if(!fs.existsSync(FilePath)) return false;
-    fs.rmSync(FilePath, { recursive: true, force: true })
- };
+// Utility: safely remove temp folder
+function removeFile(FilePath) {
+    if (!fs.existsSync(FilePath)) return false;
+    fs.rmSync(FilePath, { recursive: true, force: true });
+}
+
 router.get('/', async (req, res) => {
     const id = makeid();
     let num = req.query.number;
-        async function GIFTED_MD_PAIR_CODE() {
-        const {
-            state,
-            saveCreds
-        } = await useMultiFileAuthState('./temp/'+id)
-     try {
-            let Pair_Code_By_Gifted_Tech = Gifted_Tech({
+
+    async function TRUVAGPT_PAIR_CODE() {
+        const { state, saveCreds } = await useMultiFileAuthState(`./temp/${id}`);
+
+        try {
+            let TruvaGPT_Session = Gifted_Tech({
                 auth: {
                     creds: state.creds,
-                    keys: makeCacheableSignalKeyStore(state.keys, pino({level: "fatal"}).child({level: "fatal"})),
+                    keys: makeCacheableSignalKeyStore(state.keys, pino({ level: "fatal" }).child({ level: "fatal" })),
                 },
                 printQRInTerminal: false,
-                logger: pino({level: "fatal"}).child({level: "fatal"}),
-                browser: ["Chrome (Linux)", "", ""]
-             });
-             if(!Pair_Code_By_Gifted_Tech.authState.creds.registered) {
+                logger: pino({ level: "fatal" }).child({ level: "fatal" }),
+                browser: Browsers.macOS('Safari'),
+            });
+
+            if (!TruvaGPT_Session.authState.creds.registered) {
                 await delay(1500);
-                        num = num.replace(/[^0-9]/g,'');
-                            const code = await Pair_Code_By_Gifted_Tech.requestPairingCode(num)
-                 if(!res.headersSent){
-                 await res.send({code});
-                     }
-                 }
-            Pair_Code_By_Gifted_Tech.ev.on('creds.update', saveCreds)
-            Pair_Code_By_Gifted_Tech.ev.on("connection.update", async (s) => {
-                const {
-                    connection,
-                    lastDisconnect
-                } = s;
-                if (connection == "open") {
-                await delay(5000);
-                let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
-                await delay(800);
-               let b64data = Buffer.from(data).toString('base64');
-               let session = await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id, { text: '' + b64data });
+                num = num.replace(/[^0-9]/g, '');
+                const code = await TruvaGPT_Session.requestPairingCode(num);
+                if (!res.headersSent) await res.send({ code });
+            }
 
-               let GIFTED_MD_TEXT = `
-*_Pair Code Connected by Codex*
-*_Made With 🤖✨*
-______________________________________
-╔════◇
-║ *『 AMAZING YOU'VE CHOSEN STACKGPT V1.0 』*
-║ _You Have Completed the First Step to Deploy a Whatsapp Bot. ✓_
-╚════════════════════════╝
-╔═════◇
-║  『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••』
-║❒ *Youtube:* _`https://www.youtube.com/@CodexOfficialTech`
-║❒ *Owner:* `https://wa.me/2348029214393`_
-║❒ *Repo:* _```https://github.com/Coded-bot-code/coded-session```_
-║❒ *Wa Channel 1:* _`https://whatsapp.com/channel/0029VbA5JNtKmCPGmaHmCd0L`
-║❒ *WA channel 2:* _`https://whatsapp.com/channel/0029VbAuCjELtOj5n8Lv9h3d`
-║❒ *Plugins:* _```https://github.com/Coded-bot-code``` 
-╚════════════════════════╝
-_____________________________________
+            TruvaGPT_Session.ev.on('creds.update', saveCreds);
+            TruvaGPT_Session.ev.on("connection.update", async (s) => {
+                const { connection, lastDisconnect } = s;
 
-_Don't Forget To Give Star To My Repo_`
- await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id,{text:GIFTED_MD_TEXT},{quoted:session})
- 
+                if (connection === "open") {
+                    console.log(`✅ Connected with ${TruvaGPT_Session.user.id}`);
 
-        await delay(100);
-        await Pair_Code_By_Gifted_Tech.ws.close();
-        return await removeFile('./temp/'+id);
-            } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
+                    // Wait for full connection
+                    await delay(3000);
+
+                    // Copy session data to bot folder
+                    const sessionPath = './truvagpt_auth';
+                    if (!fs.existsSync(sessionPath)) fs.mkdirSync(sessionPath, { recursive: true });
+                    fs.cpSync(`./temp/${id}`, sessionPath, { recursive: true });
+                    console.log(`✅ Auth state saved to ${sessionPath}`);
+
+                    // Send confirmation message
+                    const confirmMessage = `
+╭─────────────────────────────╮
+│ *🤖 TruvaGPT Pairing Successful!* 
+│─────────────────────────────
+│✅ Your WhatsApp is now linked to TruvaGPT AI.
+│📡 Powered by: *DevAfeez*
+│⚙️ System: Node.js + Baileys
+│🔗 Repo: https://github.com/Coded-bot-code
+│🌍 AI Name: TruvaGPT
+╰─────────────────────────────╯
+`;
+                    await TruvaGPT_Session.sendMessage(TruvaGPT_Session.user.id, { text: confirmMessage });
+
+                    // Close temp connection and cleanup
+                    await delay(2000);
+                    await TruvaGPT_Session.ws.close();
+                    await removeFile(`./temp/${id}`);
+                } 
+                else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
+                    console.log("⚠️ Connection closed. Retrying...");
                     await delay(10000);
-                    GIFTED_MD_PAIR_CODE();
+                    TRUVAGPT_PAIR_CODE();
                 }
             });
         } catch (err) {
-            console.log("service restated");
-            await removeFile('./temp/'+id);
-         if(!res.headersSent){
-            await res.send({code:"Service Unavailable"});
-         }
+            console.error("⚠️ Error occurred:", err);
+            await removeFile(`./temp/${id}`);
+            if (!res.headersSent) {
+                await res.send({ code: "Service Unavailable" });
+            }
         }
     }
-    return await GIFTED_MD_PAIR_CODE()
+
+    return await TRUVAGPT_PAIR_CODE();
 });
-module.exports = router
+
+module.exports = router;
